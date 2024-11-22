@@ -110,6 +110,8 @@ jobs:
         with:
           php-version: ${{ matrix.php-version }}
           extensions: gd, sqlite, pdo_sqlite
+          coverage: pcov
+          ini-values: pcov.directory=.
 
       # Disable Symfony deprecations helper for PHP 8.4+ until minor
       # versions of Drupal 10 and 11 fully support PHP 8.4.
